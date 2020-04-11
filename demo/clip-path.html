@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cli-path</title>
+  <style>
+    .box {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ /* .picture {
+   width: 200px;
+  transform: rotate(45deg);
+  overflow: hidden;
+ 
+ }
+.picture > img {
+  width: 100%;
+transform: rotate(-45deg) scale(1.47);
+ } */
+img {
+  width: 100px;
+  clip-path: polygon(50% 0,100% 50%, 50% 100%,0 50%);
+  transition: clip-path 1s ;
+}
+
+img:hover {
+  clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="picture">
+    <img src="https://s.cdpn.io/profiles/user/3483322/80.jpg?1576146770">
+    </div>
+  </div>
+  <!-- clip-path CSS 属性可以创建一个只有元素的部分区域可以显示的剪切区域。区域内的部分显示，区域外的隐藏。
+    剪切区域是被引用内嵌的URL定义的路径或者外部svg的路径，或者作为一个形状例如circle().。clip-path属性代替了现在已经弃用的剪切 clip属性。 -->
+</body>
+</html>
